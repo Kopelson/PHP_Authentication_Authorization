@@ -1,0 +1,80 @@
+Authentication and Authorization
+
+Goal: Know how to protect your PHP applications
+
+Access Control List Key Advantages
+    -Quickly audit user permissions
+    -Know what users should not be able to do
+    -Used for years in computer security
+    -Used in the major operating systems
+    -Used in network security
+
+HTTP basic and digest Authentication
+
+    What is authentication?
+
+    The process of verifying the identity of a user, process, or device, often as a prerequisite to allowing access to resources in an information system."
+
+    There are multiple authentication types
+
+    Single-factor
+        a form
+        biometric data
+        additional item
+
+    multi-factor
+        a form + biometric or additional item or etc
+
+    multiform decreases the oddsthat someone can logon as you
+
+
+    Authentication Vs Authorization
+
+    authentication is not authorization
+
+    authentication determines if a user is valid
+    authorization a user has already been verified.
+
+    The benefits
+    1. only valid users have access
+    2. Access is appropriately authorized
+
+
+    Common Authentication Types
+
+    HTTP Authentication
+
+    Authentication framework, which can be used by a server to challenge a client request, and by a client to provide authentication information, as defined by RFC 7235
+
+    -doesnt use login pages
+    uses http headers
+    there are 6 types
+        basic
+        digest
+        bearer
+
+    Form-based Authentication
+
+    -has no formal specification
+    -uses http and html elements
+    -is very flexible
+    -can be very creative
+
+    Form-based Authentication Flow
+
+    form ---> server
+
+    Please Be Aware set the HTTPonly and secure flags to avoid xss attacks
+
+
+ The Predefined Variables
+    PHP_AUTH_USER
+    PHP_AUTH_PW
+    AUTH_TYPE
+
+HTTP Digest Authentication
+    - Replacement for Basic Authentication
+    -CLient credentials are not sent in plkain text
+    -Uses a server generated nonce
+        a nonce is an arbitrary number that can be used just once in a cryptographic communication
+    -Body is sent in plain text
